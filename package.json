@@ -1,0 +1,32 @@
+{
+    "name": "tutor",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack serve --open",
+        "build": "cross-env NODE_ENV=production webpack --config webpack.config.js"
+    },
+    "devDependencies": {
+        "codeceptjs": "^3.6.0",
+        "copy-webpack-plugin": "^12.0.2",
+        "cross-env": "^7.0.3",
+        "css-loader": "^7.1.2",
+        "dotenv-webpack": "^9.0.0",
+        "express": "^4.21.0",
+        "favicons-webpack-plugin": "^6.0.1",
+        "html-webpack-plugin": "^5.6.3",
+        "idb": "^8.0.0",
+        "lazysizes": "^5.3.2",
+        "live-server": "^1.2.2",
+        "lodash.filter": "^4.6.0",
+        "puppeteer": "^22.0.0",
+        "style-loader": "^4.0.0",
+        "webpack": "^5.97.0",
+        "webpack-bundle-analyzer": "^4.10.2",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^5.2.0",
+        "workbox-webpack-plugin": "^7.3.0",
+        "ws": "^8.18.0"
+    }
+}
