@@ -61,6 +61,8 @@ module.exports = {
             swSrc: path.resolve(__dirname, 'src/scripts/sw.js'),
             swDest: 'sw.js',
         })] : []),
-        new Dotenv(),
+        new Dotenv({
+            systemvars: true,
+        }),
     ],
 };
