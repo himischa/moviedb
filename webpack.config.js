@@ -2,11 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { InjectManifest } = require('workbox-webpack-plugin');
-const webpack = require('webpack');
-const Dotenv = require('dotenv-webpack');
 const path = require('path');
-
-require('dotenv').config();
 
 const isDev = process.env.NODE_ENV !== 'production';
 
@@ -64,11 +60,5 @@ module.exports = {
             swSrc: path.resolve(__dirname, 'src/scripts/sw.js'),
             swDest: 'sw.js',
         })] : []),
-        new Dotenv({
-            systemvars: true,
-        }),
-        new webpack.DefinePlugin({
-            'process.env.TMDB_API_KEY': JSON.stringify(process.env.TMDB_API_KEY),
-        }),
     ],
 };
